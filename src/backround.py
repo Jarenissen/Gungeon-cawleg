@@ -12,7 +12,7 @@ class backround:
 
 
     def __init__(self, screen):
-        self.image = pygame.image.load('stan is hot.png')
+        self.image = pygame.image.load('assets/stan is hot.png')
         self.height = SCREENHEIGHT
         self.width = SCREENWIDTH
         self.backround = pygame.transform.scale(self.image, (self.width, self.height))
