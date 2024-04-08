@@ -103,7 +103,7 @@ class Start:
     def __init__(self, display, gameStateManager):
         self.display = display
         self.gameStateManager = gameStateManager  
-        self.start_button = Button(300, 300, 'assets/pixil-frame-0 (1).png', 3, display)
+        self.start_button = Button(300, 300, 'assets/pixil-frame-0 (1).png', 3, display, 'assets/Start darker.png')
         self.backround = backround(display)
         
 
