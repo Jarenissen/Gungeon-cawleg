@@ -26,10 +26,13 @@ class Button():
         width = self.start_img.get_width()
         height = self.start_img.get_height()
         self.image = pygame.transform.scale(self.start_img, (int(width * scale), int(height * scale)))
-        self.darker_image = pygame.transform.scale(self.dark_start_img, (int(width * scale), int(height * scale)))
+        self.darker_image = pygame.transform.scale(self.dark_start_img, (int(width * scale) -2, int(height * scale)-2))
 
     def draw (self):
+
+        
         if self.mouse_hover():
+            
             self.screen.blit(self.darker_image, (self.x, self.y))
         else:
           self.screen.blit(self.image, (self.x, self.y))

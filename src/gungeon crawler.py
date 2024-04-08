@@ -80,9 +80,17 @@ class Level:
 
         self.player.draw()
 
+        key = pygame.key.get_pressed()
+
         if ticks % 5 == 0:
-            key = pygame.key.get_pressed()
+            
             self.player.move(key)
+
+        if key[pygame.K_ESCAPE]:
+            self.gameStateManager.set_state('start') 
+
+
+        
 
         
 
@@ -103,7 +111,8 @@ class Start:
     def __init__(self, display, gameStateManager):
         self.display = display
         self.gameStateManager = gameStateManager  
-        self.start_button = Button(300, 300, 'assets/pixil-frame-0 (1).png', 3, display, 'assets/Start darker.png')
+        self.start_button = Button(200, 300, 'assets/pixil-frame-0 (1).png', 3, display, 'assets/Start darker.png')
+        self.exit_button = Button(700, 300, 'assets/Exit button.png', 3, display, 'assets/darker exit button.png')
         self.backround = backround(display)
         
 
@@ -112,6 +121,8 @@ class Start:
         
         self.backround.resize_to(width, height)
         
+        if self.exit_button.collision():
+            sys.exit()
         
         if self.start_button.collision():
             self.gameStateManager.set_state('level') 
@@ -119,7 +130,7 @@ class Start:
         
         self.backround.draw()
         self.start_button.draw()
-        
+        self.exit_button.draw()
 
 
 
