@@ -35,9 +35,6 @@ class Game:
 
             ticks = ticks % 60
 
-            
-
-            
             for event in pygame.event.get():
                 
                 if event.type == pygame.QUIT:
@@ -68,12 +65,9 @@ class Level:
             
             self.player.move(key)
 
-
-
         if self.menu_button.collision():
             self.gameStateManager.set_state('start') 
         
-
         self.menu_button.draw()
 
 
@@ -86,9 +80,7 @@ class Start:
         self.exit_button = Button(700, 300, 'assets/Exit button.png', 3, display, 'assets/darker exit button.png')
         self.backround = backround(display)
         
-
     def run(self, _ticks, width, height):
-        
         
         self.backround.resize_to(width, height)
         
@@ -97,7 +89,6 @@ class Start:
         
         if self.start_button.collision():
             self.gameStateManager.set_state('level') 
-        
         
         self.backround.draw()
         self.start_button.draw()
