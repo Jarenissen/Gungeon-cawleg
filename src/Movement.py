@@ -1,23 +1,15 @@
 import pygame
 
-
-
-
 from constant import BLUE
-
-
 
 class Player:
     def __init__(self, screen):
         self.screen = screen
         self.player = pygame.Rect((500, 250, 30, 30))
         
-
     def draw(self):
         pygame.draw.rect(self.screen, (BLUE), self.player)
       
-
-
     def move(self, key):
 
         multiplier = 1
