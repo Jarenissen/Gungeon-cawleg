@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 #screen size
 SCREENWIDTH = 1280
 SCREENHEIGHT =720
