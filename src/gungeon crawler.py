@@ -82,12 +82,16 @@ class Level:
 
         key = pygame.key.get_pressed()
 
+        self.menue_button = Button(700, 300, 'pixil-frame-0.png', 3, display, 'pixil-frame-0.png')
+
         if ticks % 5 == 0:
             
             self.player.move(key)
 
         if key[pygame.K_ESCAPE]:
             self.gameStateManager.set_state('start') 
+
+        self.menu:button.draw
 
 
         
