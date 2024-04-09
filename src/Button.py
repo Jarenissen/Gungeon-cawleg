@@ -1,19 +1,8 @@
 import pygame
 
-from constant import BLUE
 from constant import SCREENHEIGHT
 from constant import SCREENWIDTH
 
-
-
-
-
-
-
-
-
-
-#button class
 
 class Button():
     def __init__(self, x, y, image_path, scale, screen, dark_image_path):
