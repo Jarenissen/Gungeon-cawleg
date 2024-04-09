@@ -2,19 +2,12 @@ import pygame
 import sys
 
 from constant import SCREENHEIGHT, SCREENWIDTH
-
 from Movement import Player
 from Button import Button
 from backround import backround
 
 
-
-
-
-
 class Game:
-
-    
 
     def __init__(self):
         pygame.init()
@@ -26,9 +19,6 @@ class Game:
 
         self.clock = pygame.time.Clock()
 
-       
-
-        
         self.gameStateManager = GameStateManager('start')  
         self.start = Start(self.screen, self.gameStateManager)
         self.level = Level(self.screen, self.gameStateManager)
@@ -39,9 +29,6 @@ class Game:
 
         ticks = 0
         
-
-
-
         while True:
 
             ticks +=1
@@ -62,19 +49,12 @@ class Game:
 
             pygame.display.update()
 
-         
-
-        
-
-            
-
 class Level:
     def __init__(self, display, gameStateManager):
        self.display = display
        self.player = Player(display)
        self.gameStateManager = gameStateManager  
        
-
     def run(self, ticks, width, height):
         self.display.fill ('grey') 
 
@@ -97,23 +77,7 @@ class Level:
         self.menu_button.draw()
 
 
-        
-
-        
-
-        
-        
-
-        
-        
-        
-
-
-
 class Start:
-
-    
-
 
     def __init__(self, display, gameStateManager):
         self.display = display
@@ -139,12 +103,6 @@ class Start:
         self.start_button.draw()
         self.exit_button.draw()
 
-
-
-           
-
-
-
 class GameStateManager:
     def __init__(self, currenState):
         self.currenState = currenState
@@ -153,8 +111,6 @@ class GameStateManager:
     def set_state(self, state):
         self.currenState = state
          
-
-
 if __name__ == '__main__':
     game = Game()
     game.run()
