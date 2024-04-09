@@ -82,7 +82,7 @@ class Level:
 
         key = pygame.key.get_pressed()
 
-        self.menue_button = Button(700, 300, 'pixil-frame-0.png', 3, display, 'pixil-frame-0.png')
+        self.menu_button = Button(700, 300, 'pixil-frame-0.png', 3, display, 'pixil-frame-0.png')
 
         if ticks % 5 == 0:
             
@@ -90,6 +90,11 @@ class Level:
 
         if key[pygame.K_ESCAPE]:
             self.gameStateManager.set_state('start') 
+
+
+        if self.menu_button.collision():
+            self.gameStateManager.set_state('level') 
+        
 
         self.menu:button.draw
 
