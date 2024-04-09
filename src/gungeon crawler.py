@@ -94,7 +94,7 @@ class Level:
             self.gameStateManager.set_state('start') 
         
 
-        self.menu_button.draw
+        self.menu_button.draw()
 
 
         
