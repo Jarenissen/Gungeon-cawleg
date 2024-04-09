@@ -88,12 +88,10 @@ class Level:
             
             self.player.move(key)
 
-        if key[pygame.K_ESCAPE]:
-            self.gameStateManager.set_state('start') 
 
 
         if self.menu_button.collision():
-            self.gameStateManager.set_state('level') 
+            self.gameStateManager.set_state('start') 
         
 
         self.menu:button.draw
