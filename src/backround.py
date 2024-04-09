@@ -1,15 +1,7 @@
 import pygame
 from constant import SCREENHEIGHT, SCREENWIDTH
 
-
-
-
-
-
-
-
 class backround:
-
 
     def __init__(self, screen):
         self.image = pygame.image.load('assets/stan is hot.png')
